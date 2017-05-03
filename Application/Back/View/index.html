@@ -1,0 +1,33 @@
+<{extend name="Common/layout" /}>
+
+<{block name="title"}><title>后台管理</title><{/block}>
+
+<{block name="right-side"}>
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                管理中心
+                <small>控制台</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+                <li class="active">控制台</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+        </section><!-- /.content -->
+
+    </aside><!-- /.right-side -->
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        $('#control').addClass('active');
+    });
+</script>
+<{/block}>

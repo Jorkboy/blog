@@ -1,0 +1,27 @@
+[ 2017-04-30T00:12:33+08:00 ] 112.90.82.218 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+
+[ 2017-04-30T20:49:11+08:00 ] 64.79.100.39 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+
+[ 2017-04-30T20:49:12+08:00 ] 64.79.100.39 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+

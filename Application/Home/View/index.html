@@ -1,0 +1,106 @@
+<{extend name="Common/layout" /}>
+
+<{block name="content"}>
+<div class="col-md-9  main-content">
+
+                <div class="posts nav-info  animation">
+                    <p class="posts-info" id="category">
+                        <{if condition="$categoryInfo"}>
+                        {$categoryInfo['name']}
+                        <{else /}>
+                        推荐阅读
+                        <{/if}>
+                    </p>
+                    <p class="posts-cnt">共 {$topCount} 篇文章</p>
+                </div>
+                <{volist name="articleList" id="article"}>
+                <div class="posts animation">
+                    <h4 class='posts-title'>
+                        <a href="{:U('Index/show',['id'=>$article['id']])}" class='animation'>{$article['subject']}</a>
+                    </h4>
+                    <p class='time'>作者 {$article['username']} &nbsp; {$article['create_time']}</p>
+                    <{if condition="$article['cover']"}>
+                    <a href="{:U('Index/show',['id'=>$article['id']])}" class='thumbnail'><img src="__ROOT__/{$article['cover']}" alt='' style="cursor: pointer"></a>
+                    <{/if}>
+                    <p class='descript'>{$article['summary']}</p>
+
+                    <div class="posts-footer">
+                        分类:
+                        <a class="class animation" href="{:U('Index/index',['id'=>$article['category_id']])}">{$article['categoryName']}</a>
+                    </div>
+                </div>
+                <{/volist}>
+
+                <nav aria-label="Page navigation" style="text-align: center">
+                    <ul class="pagination">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination" >
+                                {$pageHtml}
+                            </ul>
+                        </nav>
+                    </ul>
+                </nav>
+            </div>
+<{/block}>
+
+<{block name="sidebar"}>
+<div class="col-md-3 sidebar">
+    <div class="clearfix"></div>
+    <div class="sidebar-content">
+        <!-- start search area -->
+        <form class="form-horizontal" role="form" action="/blog/search" method="GET">
+            <input id="search" class="form-control" name="s" type="text" value="">
+            <button type="submit" class="animation red-btn">Search</button>
+        </form>
+
+        <!-- start info area -->
+        <div class="card">
+            <div class="header"></div>
+            <div class="avater">
+                <img alt="avater" src="__PUBLIC__/Upload/icon/icon.jpg">
+            </div>
+            <div class="content">
+                <h3>景色铅华</h3>
+                <ul class="status">
+                    <li><span class="normal">{$articleCount}</span><br>文章</li>
+                    <li><span class="normal">{$topCount}</span><br>精选</li>
+                    <li><span class="normal">{:count($categoryList)}</span><br>分类</li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <!-- start category area -->
+        <h5>分类</h5>
+        <ul class='nav nav-sidebar'>
+            <li class="active">
+                <a href="{:U('Index/index')}">推荐阅读<sup>{$topCount}</sup></a>
+            </li>
+            <{volist name="categoryList" id="category"}>
+            <li data-id="{$category['id']}">
+                <a href="{:U('Index/index',['id'=>$category['id']])}">{$category['name']}<sup>{$category['num']}</sup></a>
+            </li>
+            <{/volist}>
+
+        </ul>
+    </div>
+</div>
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        //导航栏活动标志
+        $('#nav > div').removeClass('active').eq(0).addClass('active');
+
+        //分类活动标志
+        $.each($('.nav-sidebar > li'),function(i,n){
+            if($(this).data('id') == "{$categoryInfo['id']}"){
+                $('.nav-sidebar > li').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+
+    });
+</script>
+<{/block}>

@@ -1,0 +1,30 @@
+<{extend name="Common/layout" /}>
+
+<{block name="link"}>
+<link href='__PUBLIC__/Home/CSS/Home/timeline.css' rel='stylesheet'>
+<{/block}>
+
+<{block name="content"}>
+    <div class="col-md-12 main-content">
+        <{volist name="articleBriefList" id="articleBrief"}>
+        <div class="timeline-img"></div>
+        <!--<div class="triangle-left"></div>-->
+        <div class="timeline-post">
+            <h4 class='post-title'>
+                <a href="{:U('Index/show',['id'=>$articleBrief['id']])}" class='animation'>{$articleBrief['subject']}</a>
+            </h4>
+            <p>{$articleBrief['summary']}</p>
+            <p class='time'>{$articleBrief['create_time']}</p>
+        </div>
+        <{/volist}>
+    </div>
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        //导航栏活动标志
+        $('#nav > div').removeClass('active').eq(1).addClass('active');
+    });
+</script>
+<{/block}>

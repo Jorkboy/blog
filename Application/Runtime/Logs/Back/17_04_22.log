@@ -1,0 +1,253 @@
+[ 2017-04-22T13:54:41+08:00 ] 27.38.142.211 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+
+[ 2017-04-22T13:54:43+08:00 ] 27.38.142.211 /Back.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.011418s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011451s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000023s ]
+
+[ 2017-04-22T13:54:43+08:00 ] 27.38.142.211 /Back.php/Login/checkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2017-04-22T13:54:49+08:00 ] 27.38.142.211 /Back.php/Login/checkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000033s ]
+
+[ 2017-04-22T13:54:50+08:00 ] 27.38.142.211 /Back.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000025s ]
+SQL: SELECT * FROM `admin` WHERE `phone` = '18128167616' LIMIT 1   [ RunTime:0.0146s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/LoginController.class.php 第 18 行.
+
+[ 2017-04-22T13:54:52+08:00 ] 27.38.142.211 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: category /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/c902602000c317a06dd48fdd319834e9.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000025s ]
+
+[ 2017-04-22T13:55:28+08:00 ] 27.38.142.211 /Back.php/Article/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 103 行.
+SQL: SELECT `id`,`category_id`,`subject`,`summary`,`create_time`,`top`,`status` FROM `article` LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 121 行.
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 124 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined variable: category /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/bd75a1f5bae92db7fbb63367fc59b7b4.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2017-04-22T13:55:33+08:00 ] 27.38.142.211 /Back.php/Article/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: category /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 78 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 122 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 135 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 142 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 145 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 154 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 158 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 163 行.
+NOTIC: [8] Undefined variable: articleList /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/9ee633c53a9b5146604336c22eb9ac70.php 第 172 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+
+[ 2017-04-22T14:20:13+08:00 ] 27.38.142.211 /Back.php/Article/Upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-04-22T14:32:21+08:00 ] 27.38.142.211 /Back.php/Article/Upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-04-22T14:42:28+08:00 ] 27.38.142.211 /Back.php/Article/Upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-04-22T14:51:59+08:00 ] 27.38.142.211 /Back.php/Article/Upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-04-22T15:04:43+08:00 ] 27.38.142.211 /Back.php/Article/Upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-04-22T15:07:22+08:00 ] 64.79.100.32 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+
+[ 2017-04-22T15:07:22+08:00 ] 64.79.100.32 /Back.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/IndexController.class.php 第 14 行.
+
+[ 2017-04-22T15:12:53+08:00 ] 27.38.142.211 /Back.php/Article/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [8] Undefined index: validate /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /usr/local/nginx/html/blog/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+NOTIC: [2] unlink(0): No such file or directory /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 47 行.
+NOTIC: [8] Undefined index: contentid /usr/local/nginx/html/blog/Application/Back/Model/ArticleModel.class.php 第 36 行.
+NOTIC: [8] Undefined index: id /usr/local/nginx/html/blog/Application/Back/Model/ArticleModel.class.php 第 46 行.
+SQL: INSERT INTO `article` (`user_id`,`category_id`,`subject`,`summary`,`top`,`status`,`create_time`,`cover`) VALUES ('2','1','家庭，沉甸甸的两字时刻在心中','最近都没看电影了，一是无奈于没什么好的新电影上线，二是在看一部国产剧《人民的名义》，三是玩王者荣耀去了，哈哈，被虐的不要不要的。这次的话题是“家庭”。不动声色，流露于内心。其实我是最近才想着去看看家庭类的剧情片，可能跟我越来越老了有关，毕竟不年轻了。','1','1','1492845173','Public/Upload/20170422/58fb02753e427.jpg') [ RunTime:0.0125s ]
+SQL: INSERT INTO `article_content` (`content`,`img`,`id`,`article_id`) VALUES ('<p><h3><ul><li><a href=\"https://movie.douban.com/subject/3077668/\" target=\"_blank\">《天水围的日与夜》</a><br></li></ul></h3></p><p><img src=\"http://www.jorkboy.xyz/Public/Upload/20170422/58faf61d892c0.jpg\"><br></p><blockquote><p>这是一部你连剧照都挑不出特别突出的电影，如果你看懂了，外表的平静掩盖不了你内心的共鸣。</p></blockquote><p><h3><ul><li><a href=\"https://movie.douban.com/subject/26694988/\" target=\"_blank\">《比海更深》</a></li></ul></h3></p><p><img src=\"http://www.jorkboy.xyz/Public/Upload/20170422/58faf8f51338d.jpg\"><br></p><blockquote><p>是枝裕和导演的新作，他的《如父如子》也很好，我一直觉得日本的家庭片要比韩国的出色，日本拍的家庭片都很细腻，这好似我很喜欢的</p></blockquote><p><h3><ul><li><a href=\"https://movie.douban.com/subject/1291818/\" target=\"_blank\">《饮食男女》</a></li></ul></h3></p><p><img src=\"http://www.jorkboy.xyz/Public/Upload/20170422/58fafb54291cf.jpg\"><br></p><blockquote><p>一桌子一家庭，这是中国从古到今都不曾改变的。而不论桌子上的饭菜是多是少，是好是坏，你坐在这里都是我们心里对这个家的认同</p></blockquote><p><h3><ul><li><a href=\"https://movie.douban.com/subject/10537853/\" target=\"_blank\">《万箭穿心》</a></li></ul></h3></p><p><img src=\"http://www.jorkboy.xyz/Public/Upload/20170422/58fafd8fb7810.jpg\"><br></p><blockquote><p>女主演技吊打各大花瓶，初次看的时候被颜丙燕的演技惊艳到了，谁看谁知道</p></blockquote><p><h3><ul><li><a href=\"https://movie.douban.com/subject/1292365/\" target=\"_blank\">《活着》</a></li></ul></h3></p><p><img src=\"http://www.jorkboy.xyz/Public/Upload/20170422/58fb008ba4b5e.jpg\"><br></p><blockquote><p>这部不用介绍了，还没看的，连我都会嫌弃你</p></blockquote><p><b>以上。</b></p><p><br></p>','a:5:{i:0;s:63:\"http://www.jorkboy.xyz/Public/Upload/20170422/58fb008ba4b5e.jpg\";i:1;s:63:\"http://www.jorkboy.xyz/Public/Upload/20170422/58fafd8fb7810.jpg\";i:2;s:63:\"http://www.jorkboy.xyz/Public/Upload/20170422/58fafb54291cf.jpg\";i:3;s:63:\"http://www.jorkboy.xyz/Public/Upload/20170422/58faf8f51338d.jpg\";i:4;s:63:\"http://www.jorkboy.xyz/Public/Upload/20170422/58faf61d892c0.jpg\";}',NULL,'13') [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 70 行.
+
+[ 2017-04-22T15:12:55+08:00 ] 27.38.142.211 /Back.php/Article/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 103 行.
+SQL: SELECT `id`,`category_id`,`subject`,`summary`,`create_time`,`top`,`status` FROM `article` LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant BACK_PAGE - assumed 'BACK_PAGE' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 121 行.
+NOTIC: [8] Use of undefined constant BACK_URL - assumed 'BACK_URL' /usr/local/nginx/html/blog/Application/Back/Controller/ArticleController.class.php 第 124 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: category /usr/local/nginx/html/blog/Application/Runtime/Cache/Back/bd75a1f5bae92db7fbb63367fc59b7b4.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000030s ]
+

@@ -1,0 +1,99 @@
+<{extend name="Common/layout" /}>
+
+<{block name="link"}>
+<link href='__PUBLIC__/Back/wangEditor/dist/css/wangEditor.min.css' rel='stylesheet'>
+<link href='__PUBLIC__/Back/wangEditor/dist/css/styles/monokai-sublime.css' rel='stylesheet'>
+<{/block}>
+
+<{block name="content"}>
+    <div class="col-md-9  main-content">
+                <div class="post">
+
+                    <!--start article header aera-->
+                    <div class="header">
+                        <div class="title">
+                            <h2 class='text-center'>{$articleDetail['subject']}</h2>
+                        </div>
+                        <div class='time'>编辑于 {$articleDetail['create_time']}</div>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <div class="footer">
+                        <a class="ret animation" href="{:U('Index/index',['id'=>$articleDetail['category_id']])}"><b>&lt;</b> 回到分类: {$articleDetail['categoryName']}</a>
+                    </div>
+
+                    <!--start main article aera-->
+                    <div class="article">{$articleDetail['content']}</div>
+
+                    <!--start article footer aera-->
+                    <div class="footer">
+                        <p class="copyinfo" style="color: red">如非说明，文章均为原创，转载需注明出处.</p>
+                        <div style="clear: both;"></div>
+                        <a class="ret animation" href="{:U('Index/index',['id'=>$articleDetail['category_id']])}"><b>&lt;</b> 回到分类: {$articleDetail['categoryName']}</a>
+                    </div>
+                </div>
+            </div>
+<{/block}>
+
+<{block name="sidebar"}>
+<div class="col-md-3 sidebar">
+    <div class="clearfix"></div>
+    <div class="sidebar-content">
+        <!-- start search area -->
+        <form class="form-horizontal" role="form" action="/blog/search" method="GET">
+            <input id="search" class="form-control" name="s" type="text" value="">
+            <button type="submit" class="animation red-btn">Search</button>
+        </form>
+
+        <!-- start info area -->
+        <div class="card">
+            <div class="header"></div>
+            <div class="avater">
+                <img alt="avater" src="__PUBLIC__/Upload/icon/icon.jpg">
+            </div>
+            <div class="content">
+                <h3>景色铅华</h3>
+                <ul class="status">
+                    <li><span class="normal">{$articleCount}</span><br>文章</li>
+                    <li><span class="normal">{$topCount}</span><br>精选</li>
+                    <li><span class="normal">{:count($categoryList)}</span><br>分类</li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <!-- start category area -->
+        <h5>分类</h5>
+        <ul class='nav nav-sidebar'>
+            <li class="active">
+                <a href="{:U('Index/index')}">推荐阅读<sup>{$topCount}</sup></a>
+            </li>
+            <{volist name="categoryList" id="category"}>
+            <li data-id="{$category['id']}">
+                <a href="{:U('Index/index',['id'=>$category['id']])}">{$category['name']}<sup>{$category['num']}</sup></a>
+            </li>
+            <{/volist}>
+
+        </ul>
+    </div>
+</div>
+<{/block}>
+
+<{block name="js"}>
+<script src='__PUBLIC__/Back/wangEditor/dist/js/wangEditor.min.js'></script>
+<script>
+    $(function(){
+        //导航栏活动标志
+        $('#nav > div').removeClass('active').eq(0).addClass('active');
+
+        //分类活动标志
+        $.each($('.nav-sidebar > li'),function(){
+            if($(this).data('id') == "{$articleDetail['category_id']}"){
+                $('.nav-sidebar > li').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+
+    });
+</script>
+<{/block}>

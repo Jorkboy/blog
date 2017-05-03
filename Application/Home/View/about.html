@@ -1,0 +1,58 @@
+<{extend name="Common/layout" /}>
+
+<{block name="content"}>
+    <div class="content-warp">
+    <div class="container">
+        <div class="row">
+            <!--start main content aera-->
+            <div class="col-md-12  main-content">
+                <div class="post">
+
+                    <!--start article header aera-->
+                    <div class="header">
+                        <div class="title">
+                            <h2 class='text-center'>简介 | About</h2>
+                        </div>
+                        <div class='time'><br></div>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <!--start main article aera-->
+                    <div style="border-bottom: none;" class="article">
+
+                        <a href='' class='thumbnail'>
+                            <img src='__PUBLIC__/Upload/icon/home.jpg' alt=''>
+                        </a>
+
+                        <h4>自我介绍</h4>
+                        <p class='para'>
+                            作者：景色铅华，喜欢电影，喜欢技术，别无他长。
+                        </p>
+
+                        <h4>博客介绍</h4>
+
+                        <p class='para'>
+                            电影看了不少，发现观影水平没有提高，我能怎么办？我也很无奈啊
+                        </p>
+
+
+                        <h4>联系方式</h4>
+                        <p class='para'>
+                            E-mail: allstill@live.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        //导航栏活动标志
+        $('#nav > div').removeClass('active').eq(2).addClass('active');
+    });
+</script>
+<{/block}>

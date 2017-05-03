@@ -1,0 +1,96 @@
+<{extend name="Common/layout" /}>
+
+<{block name="title"}><title>分类设置</title><{/block}>
+
+<{block name="right-side"}>
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                <{if condition="$category"}>
+                分类编辑
+                <{else /}>
+                分类添加
+                <{/if}>
+                <small>分类</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="index.php"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+                <li><a href="category.php">分类</a></li>
+                <li class="active">
+                    <{if condition="$category"}>
+                    分类编辑
+                    <{else /}>
+                    分类添加
+                    <{/if}>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <form id="categoryForm" action="{:U('/Back.php/Category/set')}" method="post">
+                            <div class="box-header">
+                                <h3 class="box-title"></h3>
+                                <a href="{:U('/Back.php/Category/list')}" class="btn btn-default pull-right">分类列表</a>
+                            </div><!-- /.box-header -->
+
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="inputTitle">分类标题</label>
+                                    <{if condition="$category"}>
+                                    <input type="text" name="title" placeholder="标题" id="inputTitle" value="{$category['name']}" class="form-control">
+                                    <input type="hidden" name="id" value="{$category['id']}">
+                                    <{else /}>
+                                    <input type="text" name="title" placeholder="标题" id="inputTitle" class="form-control">
+                                    <{/if}>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputOrderNumber">父级分类</label>
+                                    <select name="parent_id" id="inputCategoryId" class="form-control">
+                                        <option value="0">顶级分类</option>
+                                        <{volist name="categoryList" id="list"}>
+                                        <{if condition="$list['id'] eq $category['parent_id']"}>
+                                        <option value="{$list['id']}" selected>{$list['name']}</option>
+                                        <{else /}>
+                                        <option value="{$list['id']}">{$list['name']}</option>
+                                        <{/if}>
+                                        <{/volist}>
+                                    </select></div>
+                                </div><!-- /.box-body -->
+                            <div class="box-footer clearfix">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div><!-- /.box-footer -->
+                        </form>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </section><!-- /.content -->
+    </aside><!-- /.right-side -->
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        $('#category').addClass('active');
+        $('#category > a > i').eq(1).removeClass('fa-angle-left').addClass('fa-angle-down');
+        $('#category > ul').css('display','block');
+        $('#category > ul a').eq(1).css('color','#FFC617');
+
+        //表单验证
+        $('#categoryForm').submit(function(){
+            $('#title').remove();
+            if($('#inputTitle').val() == ''){
+                var label = '<label id="title" style="color: red">请填写标题</label>';
+                $('#inputTitle').parent().append(label);
+                return false;
+            }
+            return true;
+        });
+    });
+</script>
+<{/block}>

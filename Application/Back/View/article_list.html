@@ -1,0 +1,90 @@
+<{extend name="Common/layout" /}>
+
+<{block name="title"}><title>文章列表</title><{/block}>
+
+<{block name="right-side"}>
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                文章列表
+                <small>文章</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="{:U('Back.php/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+                <li>文章</li>
+                <li class="active">文章列表</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <a href="{:U('Back.php/Article/set')}" class="btn btn-default pull-right">添加文章</a>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <table class="table table-bordered" style="text-align: center">
+                                <tbody>
+                                <tr>
+                                    <th style="width: 5%;text-align: center">id</th>
+                                    <th style="width: 5%;text-align: center">状态</th>
+                                    <th style="width: 5%;text-align: center">推荐</th>
+                                    <th style="width: 35%;text-align: center">标题</th>
+                                    <th style="width: 20%;text-align: center">所属分类</th>
+                                    <th style="width: 15%;text-align: center">创建时间</th>
+                                    <th style="width: 15%;text-align: center">操作</th>
+                                </tr>
+                                <{volist name="articleList" id="list"}>
+                                <tr>
+                                    <td style="line-height: 35px">{$list['id']}</td>
+                                    <td style="line-height: 35px">
+                                        {$list['status']}
+                                    </td>
+                                    <td style="line-height: 35px">{$list['top']}</td>
+                                    <td style="line-height: 35px"><a href="{:U('Index/show/',['id'=>$list['id']])}">{$list['subject']}</a></td>
+                                    <td style="line-height: 35px">{$list['category']}</td>
+                                    <td style="line-height: 35px">{$list['create_time']}</td>
+                                    <td>
+                                        <a href="{:U('Back.php/Article/set',['id'=>$list['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a>
+                                        <a href="{:U('Back.php/Article/delete',['id'=>$list['id']])}" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a>
+                                    </td>
+                                </tr>
+                                <{/volist}>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                        <!--分页的位置-->
+                        <nav aria-label="Page navigation" style="text-align: center">
+                            <ul class="pagination">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        {$pageHtml}
+                                    </ul>
+                                </nav>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.content -->
+    </aside><!-- /.right-side -->
+<{/block}>
+
+<{block name="js"}>
+<script>
+    $(function(){
+        //处理左侧栏
+        $('#article').addClass('active');
+        $('#article > a > i').eq(1).removeClass('fa-angle-left').addClass('fa-angle-down');
+        $('#article > ul').css('display','block');
+        $('#article > ul a').eq(0).css('color','#FFC617');
+    });
+</script>
+<{/block}>
+
