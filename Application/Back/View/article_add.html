@@ -192,10 +192,11 @@
         //提交前的处理
         $('#form').submit(function(){
             //正则匹配text area中的图片地址
-            var pattern = /http:\/\/.*?(\.jpg|\.png|\.gif)(?=")/ig; //全局搜索
+            var pattern = /\/\/.*?(\.jpg|\.png|\.gif)(?=")/ig; //全局搜索
 
             //遍历添加到表单隐藏域
             if(content.val().match(pattern)){
+                console.log(content.val().match(pattern));
                 $.each(content.val().match(pattern), function(i, n){
                     var image = '<input type="hidden" name="addImage[]" value="' + n + '">';
                     $('#form').prepend(image);

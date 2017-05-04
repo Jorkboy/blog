@@ -30,6 +30,7 @@ class ArticleModel extends RelationModel
     //文章入库
     public function setArticle($data) {
         $contentData = array();
+
         $contentModel = M('ArticleContent');
         $contentData['content'] = $data['content'];
         $contentData['img'] = $data['img'];

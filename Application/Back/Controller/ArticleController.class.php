@@ -7,6 +7,7 @@ use Think\Upload;
 
 class ArticleController extends Controller
 {
+    public $model;
     public function __construct()
     {
         parent::__construct();

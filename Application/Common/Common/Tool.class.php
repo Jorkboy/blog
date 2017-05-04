@@ -17,9 +17,9 @@ class Tool
     public static function deleteImg($img){
         if(is_array($img)){
             foreach($img as $v){
-                $url = str_replace('http://' . $_SERVER['SERVER_NAME'] . __ROOT__ . '/', '', $v);
+                $url = str_replace('//' . $_SERVER['SERVER_NAME'] . __ROOT__ . '/', '', $v);
                 //删除图片
-                unlink($url);
+                unlink($url) ? : E('文章内容图片删除失败，快检查代码啊');
             }
         }
     }
