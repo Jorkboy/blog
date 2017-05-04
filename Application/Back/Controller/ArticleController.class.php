@@ -169,8 +169,8 @@ class ArticleController extends Controller
 			// 上传错误提示错误信息
 			$this->error($upload->getError());
 		}else{
-			//返回的URL
-			$URL ='https://' . $_SERVER['SERVER_NAME'] . __ROOT__ . '/' . C('UPLOAD')['rootPath'] . $info['image']['savepath'] . $info['image']['savename'];
+			//返回的URL，//表示让浏览器选择使用的协议，这样可以避免http和https混淆
+			$URL ='//' . $_SERVER['SERVER_NAME'] . __ROOT__ . '/' . C('UPLOAD')['rootPath'] . $info['image']['savepath'] . $info['image']['savename'];
 
 			//必须以原始字串返回，在后面加EVAL
 			$this->ajaxReturn($URL, 'EVAL');
